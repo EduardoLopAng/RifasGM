@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rifa</title>
+    <link rel="stylesheet" href="D:\Joyeria GM\CSS\styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="nombre-rifa">Rifa</h1>
+        <p>Introduce tu nombre y selecciona un número para participar en la rifa:</p>
+        <input type="text" id="nombre" placeholder="Nombre">
+        <select id="numero"></select>
+        <button onclick="mostrarMetodosPago()">Siguiente</button>
+        <div class="metodos-pago" style="display:none;">
+            <h3>Formas de pago</h3>
+            <button onclick="mostrarFormularioPago('BBVA')">Pagar con BBVA</button>
+            <button onclick="mostrarFormularioPago('MercadoPago')">Pagar con Mercado Pago</button>
+        </div>
+        <div class="formulario-pago" style="display:none;">
+            <h3>Datos de la tarjeta</h3>
+            <input type="text" id="nombre-tarjeta" placeholder="Nombre en la tarjeta">
+            <input type="text" id="numero-tarjeta" placeholder="Número de la tarjeta">
+            <input type="text" id="fecha-expiracion" placeholder="Fecha de expiración (MM/AA)">
+            <input type="text" id="cvv" placeholder="CVV">
+            <button onclick="procesarPago()">Realizar Pago</button>
+        </div>
+        <p>Fecha de la rifa: <span id="fecha-rifa"></span></p>
+        <p>Costo del boleto: <span id="costo-boleto"></span></p>
+        <table id="tabla-numeros">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Nombre</th>
+                    <th>No.</th>
+                    <th>Nombre</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Filas generadas por JavaScript -->
+            </tbody>
+        </table>
+        <button onclick="location.href='configuracion.html'" class="icono-anfitrion"><i class="fas fa-user-shield"></i></button>
+    </div>
+    <script src="D:\Joyeria GM\JS\script.js"></script>
+</body>
+</html>

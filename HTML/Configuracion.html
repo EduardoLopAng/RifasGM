@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración</title>
+    <link rel="stylesheet" href="D:\Joyeria GM\CSS\Confi.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Configuración de la Rifa</h1>
+        <input type="password" id="password" placeholder="Contraseña de Anfitrión">
+        <button onclick="verificarAnfitrion()">Acceder</button>
+        <div id="configuracion-anfitrion" style="display:none;">
+            <p>Nombre de la rifa: <input type="text" id="nuevo-nombre-rifa" placeholder="Nombre de la rifa"></p>
+            <p>Fecha de la rifa: <input type="date" id="nueva-fecha-rifa"></p>
+            <p>Costo del boleto: <input type="number" id="nuevo-costo-boleto" placeholder="Costo del boleto" min="0"></p>
+            <p>Nueva Contraseña (opcional): <input type="password" id="nueva-contrasena" placeholder="Nueva Contraseña (opcional)"></p>
+            <button onclick="guardarConfiguracion()">Guardar Configuración</button>
+            <button onclick="resetearRifa()">Resetear Rifa</button>
+        </div>
+        <div id="mensaje-cambios" style="display:none;">
+            <p>Cambios realizados</p>
+        </div>
+    </div>
+    <script src="D:\Joyeria GM\JS\confi.js"></script>
+</body>
+</html>
